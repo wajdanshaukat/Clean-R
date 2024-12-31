@@ -1,0 +1,166 @@
+/* General Styles for Calendar */
+.rbc-calendar {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.rbc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.rbc-event {
+  padding: 5px;
+  background-color: #ffeb3b;
+  border-radius: 5px;
+  color: black;
+  font-size: 14px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rbc-day-bg {
+  border: 1px solid #ddd;
+}
+
+.rbc-today {
+  background-color: #e3f2fd !important;
+}
+
+.rbc-toolbar-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rbc-header {
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.rbc-row-bg {
+  background-color: #f5f5f5;
+}
+
+/* Responsiveness for tablet screens */
+@media (max-width: 768px) {
+  /* Adjust toolbar layout for tablet screens */
+  .rbc-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .rbc-btn-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .rbc-toolbar-label {
+    font-size: 16px;
+  }
+
+  /* Adjust event size and padding */
+  .rbc-event {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  /* Make the days in the month view more compact */
+  .rbc-month-view .rbc-day {
+    width: 13%;
+  }
+
+  /* Week View: Adjust width for days and enable scrolling */
+  .rbc-week-view .rbc-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling for week view */
+  }
+
+  .rbc-week-view .rbc-day {
+    flex: 0 0 14%; /* Dynamically adjust column width */
+    max-width: 14%; /* Limit width for each column */
+    padding: 3px;
+  }
+
+  .rbc-week-view .rbc-day-bg {
+    padding: 3px;
+  }
+
+  .rbc-week-view .rbc-event {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .rbc-header,
+  .rbc-day-bg {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+  /* Event adjustments */
+  .rbc-event {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  /* Toolbar adjustments */
+  .rbc-btn-group {
+    flex-direction: column;
+  }
+
+  .rbc-toolbar-label {
+    font-size: 14px;    
+  }
+
+  /* Adjust day width for smaller screens */
+  .rbc-month-view .rbc-day,
+  .rbc-week-view .rbc-day {
+    flex: 0 0 20%; /* Make columns more compact */
+    width: 20%;
+    }
+
+  .rbc-header,
+  .rbc-day-bg {
+    padding: 4px;
+    font-size: 10px;
+  }
+
+  /* Further compact week view */
+  .rbc-week-view .rbc-day {
+    flex: 0 0 20%; /* Make columns more compact */
+    width: 20%;
+  }
+}
+
+.rbc-week-view .rbc-time-view {
+  flex: 0 0 20%; /* Make columns more compact */
+  width: 100%;
+}
+
+/* Additional Style Enhancements */
+.rbc-row {
+  gap: 0px; /* Remove gaps between rows */
+}
+
+.rbc-off-range-bg {
+  background-color: #f9f9f9; /* Lighter background for off-range days */
+}
+
+.rbc-show-more {
+  color: #2196f3; /* Highlight "Show more" links */
+  cursor: pointer;
+  font-size: 12px;
+}
+
